@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const server = axios.create({
-  baseURL: `https://community.clover.com/services/v2/`,
+  baseURL: process.env.ANSWERHUB_ENDPOINT,
   headers: { Authorization: `Basic ${process.env.TEST_AUTH}` }
 })
 
@@ -11,9 +11,9 @@ module.exports = {
       let { data } = await server({
         method: 'get',
         url: '/question.json',
-        params: { answered: false, spaceId, sort: 'newest' }
+        params: { unanswered: true, spaceId, pageSize: 36, sort: 'newest' }
       })
-      return data.list
+      return data.list.reverse()
     } catch (e) {
       console.log(e)
     }
