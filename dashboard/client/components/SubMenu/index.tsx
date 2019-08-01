@@ -9,7 +9,7 @@ import './styles.scss'
 
 const SubMenu = ({ space }) => {
   const { spaces } = useContext(SpacesCtx)
- 
+
   const goToSpace = (id: string) => (_: MouseEvent) =>
     Router.push({ pathname: '/tickets', query: { space: id } })
 

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, Dispatch } from 'react'
+import React, { Dispatch, createContext, useEffect, useState } from 'react'
 import { useQuery } from 'react-apollo-hooks'
 import { GET_TICKET_QUERY } from '../lib/gql/query'
 import { Filter, Header, Layout, SubMenu, Ticket, TicketsHeader } from '../components'
