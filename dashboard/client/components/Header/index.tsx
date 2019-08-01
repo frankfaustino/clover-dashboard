@@ -7,7 +7,7 @@ import { SpacesCtx } from '../../lib/spaceCtx'
 import './styles.scss'
 
 const Header = () => {
-  const {sidebarShowing, setSidebarShowing} = useContext(SidebarCtx)
+  const { sidebarShowing, setSidebarShowing } = useContext(SidebarCtx)
   const { currentSpace } = useContext(SpacesCtx)
 
   return (

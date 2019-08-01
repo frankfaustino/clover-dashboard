@@ -2,6 +2,7 @@ import React from 'react'
 import { createPortal } from 'react-dom'
 import onClickOutside, { WrapperClass } from 'react-onclickoutside'
 
+import Full from './Full'
 import Item from './Item'
 
 import './styles.scss'
@@ -45,7 +46,7 @@ const Modal = ({ cursorX, cursorY, handleClickOutside, type }) => {
     case 'multi':
       return renderItems(ADMINS)
     case 'full':
-      return <></>
+      return <Full />
     default:
       return <></>
   }
