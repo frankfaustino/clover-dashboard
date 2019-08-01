@@ -14,7 +14,7 @@ export default {
         method: 'get',
         url: '/question.json',
         params: {
-          pageSize: 75,
+          pageSize: 50,
           sort: 'newest',
           spaceId,
           unanswered: true
